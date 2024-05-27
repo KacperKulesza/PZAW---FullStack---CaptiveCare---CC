@@ -6,6 +6,7 @@ import './App.css'
 import PrisonerDatabase from './components/PrisonerDatabase'
 import PrisonerMainList from './components/PrisonerMainList'
 import PrisonerDetailsList from './components/PrisonerDetailsList'
+import Login from './components/Login'
 import { Route, Routes, Link, useNavigate } from 'react-router-dom'
 
 function App() {
@@ -26,6 +27,12 @@ function App() {
           <li>
             <Link to="database">Show Prisoner database manager</Link>
           </li>
+          <li>
+            <Link to="login">Admin login</Link>
+          </li>
+          <li>
+            <Link to="">Main page</Link>
+          </li>
         </ul>
       </nav>
 
@@ -33,6 +40,7 @@ function App() {
         <Route path="/prisoners-main" element={<PrisonerMainList />}/>
         <Route path="/prisoners-details" element={<PrisonerDetailsList />}/>
         <Route path="/database" element={<PrisonerDatabase />}/>
+        <Route path="/login" element={<Login />}/>
         <Route path="/" element={<h1>Strona Główna!</h1>}/>
       </Routes>
     </>
