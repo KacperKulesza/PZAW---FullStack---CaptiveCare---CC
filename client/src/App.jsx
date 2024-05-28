@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <h1>więzienie</h1>
+      <h1>The prison</h1>
       <nav>
         <ul>
           <li>
@@ -41,7 +41,7 @@ function App() {
         <Route path="/prisoners-details" element={<PrisonerDetailsList />}/>
         <Route path="/database" element={<PrisonerDatabase />}/>
         <Route path="/login" element={<Login />}/>
-        <Route path="/" element={<h1>Strona Główna!</h1>}/>
+        <Route path="/" element={<h1>The Main Page of The Prison!</h1>}/>
       </Routes>
     </>
   )

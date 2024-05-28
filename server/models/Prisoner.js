@@ -2,9 +2,7 @@ const mongoose = require("mongoose");
 
 const prisonerSchema = new mongoose.Schema({
     name: String,
-    email: String,
-    age: Number,
-    imageUrl: String
+    punishment: String
 })
 
 const Prisoner = mongoose.model("Prisoner", prisonerSchema, "Prisoner");
