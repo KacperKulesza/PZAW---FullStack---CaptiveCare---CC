@@ -20,14 +20,16 @@ const PrisonerList = () => {
 
     return(
         <>
-            <h1>Detailed list of prisoners</h1>
-            <ul style={{ listStyle: 'none' }}>
-                {prisonersList.map(prisoner => (
-                    <li key={prisoner._id}>
-                        id: {prisoner._id}, name: {prisoner.name}, punishment: {prisoner.punishment}
-                    </li>
-                ))}
-            </ul>
+        <fieldset>
+            <legend>Detailed list of prisoners</legend>
+                <ul style={{ listStyle: 'none' }}>
+                    {prisonersList.map(prisoner => (
+                        <li key={prisoner._id}>
+                            id: {prisoner._id}, name: {prisoner.name}, punishment: {prisoner.punishment}
+                        </li>
+                    ))}
+                </ul>
+        </fieldset>
         </>
     )
 }

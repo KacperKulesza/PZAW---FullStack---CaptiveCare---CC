@@ -66,24 +66,28 @@ const PrisonerDatabase = () => {
 
     return (
         <>
-            <h5>Add a new prisoner</h5>
+            
             <form onSubmit={addPrisonerHandler}>
-                <input
-                    type="text"
-                    placeholder="Enter a prisoner name..."
-                    value={newPrisoner.name}
-                    onChange={(e) => setNewPrisoner({ ...newPrisoner, name: e.target.value })}
-                />
-                <input
-                    type="text"
-                    placeholder="Enter a punishment..."
-                    value={newPrisoner.punishment}
-                    onChange={(e) => setNewPrisoner({ ...newPrisoner, punishment: e.target.value })}
-                />
-                <button type="submit">Add prisoner</button>
+                <fieldset>
+                    <legend>Add Prisoner</legend>
+                    <input
+                        type="text"
+                        placeholder="Enter a prisoner name..."
+                        value={newPrisoner.name}
+                        onChange={(e) => setNewPrisoner({ ...newPrisoner, name: e.target.value })}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Enter a punishment..."
+                        value={newPrisoner.punishment}
+                        onChange={(e) => setNewPrisoner({ ...newPrisoner, punishment: e.target.value })}
+                    />
+                    <button type="submit">Add prisoner</button>
+                </fieldset>
             </form>
 
-            <h5>Delete a prisoner</h5>
+            <fieldset>
+                <legend>Delete prisoner</legend>
             <ul style={{ listStyle: 'none' }}>
                 {prisonersList.map(prisoner => (
                     <li key={prisoner._id} onClick={() => deletePrisoner(prisoner._id)}>
@@ -91,11 +95,13 @@ const PrisonerDatabase = () => {
                     </li>
                 ))}
             </ul>
+            </fieldset>
 
-            <h5>Update a prisoner</h5>
+            <fieldset>
+                <legend>Update prisoner</legend>
             <form onSubmit={updatePrisonerHandler}>
                 <select value={selectedValue} onChange={(e) => setSelectedValue(e.target.value)}>
-                    <option value="">Select a prisoner to update...</option>
+                    <option value="">Select a prisoner to update</option>
                     {prisonersList.map(prisoner => (
                         <option key={prisoner._id} value={prisoner._id}>
                             {prisoner.name}
@@ -117,6 +123,7 @@ const PrisonerDatabase = () => {
                 />
                 <button type="submit">Update prisoner</button>
             </form>
+            </fieldset>
         </>
     );
 }

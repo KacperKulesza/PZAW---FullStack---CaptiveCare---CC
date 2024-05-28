@@ -66,3 +66,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+input, select, button{
+  padding: 10px;
+  margin: 10px;
+}
+nav ul li{
+  float: left;
+  padding: 20px;
+}
+nav ul{
+  list-style-type: none;
+}
